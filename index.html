@@ -33,7 +33,7 @@
             <h4>$4</h4>
           </div>
           <div class="add-item">
-            <button class="item-btn">+</button>
+            <button onclick="addHotDog()" class="item-btn">+</button>
           </div>
         </div>
         <div class="linebreak"></div>
@@ -49,7 +49,7 @@
             <h4>$3</h4>
           </div>
           <div class="add-item">
-            <button class="item-btn">+</button>
+            <button onclick="addBeer()" class="item-btn">+</button>
           </div>
         </div>
       </div>
@@ -58,12 +58,12 @@
         <h4 id="order">Your Order</h4>
         <div class="subtotal">
           <div id="bill-items">
-              <p class="bill-item">Hot Dogs (x<span>0</span>)</p>
-              <p class="bill-item">Beer (x<span>0</span>)</p>
+              <p class="bill-item">Hot Dogs (x<span id="hotdog-count">0</span>)</p>
+              <p class="bill-item">Beer (x<span id="beer-count">0</span>)</p>
           </div>
           <div id="bill-prices">
-              <p class="bill-item">$<span>0</span></p>
-              <p class="bill-item">$<span>0</span></p>
+              <p class="bill-item">$<span id="hotdog-subtotal">0</span></p>
+              <p class="bill-item">$<span id="beer-subtotal">0</span></p>
           </div>
         </div>
         <div class="linebreak-heavy"></div>
@@ -72,7 +72,7 @@
                 <p class="bill-item">Total Price:</p>
             </div>
             <div>
-                <p class="bill-item">$<span>0</span></p>
+                <p class="bill-item">$<span id="total">0</span></p>
             </div>
           </div>
         <button id="order-btn">Place Order</button>
