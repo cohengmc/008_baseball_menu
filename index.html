@@ -4,34 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&family=Happy+Monkey&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela&display=swap"
+      rel="stylesheet"
+    />
     <title>Ballpark Menu</title>
   </head>
   <body>
-    <p>(a mobile app demo)</p>
+    <p id="mobile">(a mobile app demo)</p>
     <br />
-    <div id="header">
-      <h1>Geoff's Dogs</h1>
-      <h3>Ice cold beeeeeer here!</h3>
-    </div>
-    <div id="menu">
-      <div class="item">
-        <img
-          class="item-img"
-          src="https://media.giphy.com/media/kZzY6eKKPdIjK/giphy.gif?cid=790b7611vw39o5ylzzfsq1q71vyg7pwp4oawh5zq0xbwvnto&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          alt="a cute and creepy hot dog guy with a smile waving at you"
-        />
-        <div class="item-txt">
-          <h3>Hot Dog</h3>
-          <p>Classic footlong ballpark dog</p>
-          <h4>$3</h4>
+    <div id="app">
+      <div id="header">
+        <h1>Geoff's Dogs</h1>
+        <h4>Get em while they last!</h4>
+      </div>
+      <div id="menu">
+        <div class="item">
+          <img
+            class="item-img"
+            src="https://media.giphy.com/media/kZzY6eKKPdIjK/giphy.gif?cid=790b7611vw39o5ylzzfsq1q71vyg7pwp4oawh5zq0xbwvnto&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+            alt="a cute and creepy hot dog guy with a smile waving at you"
+          />
+          <div class="item-txt">
+            <h3>Hot Dog</h3>
+            <p>Classic footlong ballpark dog</p>
+            <h4>$4</h4>
+          </div>
+          <div class="add-item">
+            <button class="item-btn">+</button>
+          </div>
         </div>
-        <div class="add-item">
-          <h3 class="item-btn">+</h3>
+        <div class="linebreak"></div>
+        <div class="item">
+          <img
+            class="item-img"
+            src="https://media.giphy.com/media/QRzFudfiO3gO4Htt3W/giphy.gif?cid=790b7611cbshrcbghvn3yj8up6nxh2tujizv5q7evxokgbep&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+            alt="a beer being cracked open and beer spraying everywhere"
+          />
+          <div class="item-txt">
+            <h3>Yuengling</h3>
+            <p>An ice cold beer</p>
+            <h4>$3</h4>
+          </div>
+          <div class="add-item">
+            <button class="item-btn">+</button>
+          </div>
         </div>
       </div>
+      <div class="linebreak"></div>
+      <div id="bill">
+        <h4 id="order">Your Order</h4>
+        <div class="subtotal">
+          <div id="bill-items">
+              <p class="bill-item">Hot Dogs (x<span>0</span>)</p>
+              <p class="bill-item">Beer (x<span>0</span>)</p>
+          </div>
+          <div id="bill-prices">
+              <p class="bill-item">$<span>0</span></p>
+              <p class="bill-item">$<span>0</span></p>
+          </div>
+        </div>
+        <div class="linebreak-heavy"></div>
+        <div class="subtotal">
+            <div>
+                <p class="bill-item">Total Price:</p>
+            </div>
+            <div>
+                <p class="bill-item">$<span>0</span></p>
+            </div>
+          </div>
+        <button id="order-btn">Place Order</button>
+      </div>
     </div>
-    <div id="bill">
-      <button>Place Order</button>
-    </div>
+    <script src="index.js"></script>
   </body>
 </html>
