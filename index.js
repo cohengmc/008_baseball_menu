@@ -7,21 +7,35 @@ let hotdogSubtotalEl = document.getElementById("hotdog-subtotal")
 let totalEl = document.getElementById("total")
 
 
-function addHotDog(){
+function addHotDog() {
     hotDogs++
     updatePrices()
 }
 
-function addBeer(){
+function addBeer() {
     beers++
     updatePrices()
 }
 
-function updatePrices(){
+function removeHotDog() {
+    if (hotDogs > 0) {
+        hotDogs--
+        updatePrices()
+    }
+}
+
+function removeBeer() {
+    if (beers > 0) {
+        beers--
+        updatePrices()
+    }
+}
+
+function updatePrices() {
     hotdogCountEl.innerHTML = hotDogs
     beerCountEl.innerHTML = beers
-    beerSubtotalEl.innerHTML = beers*3
-    hotdogSubtotalEl.innerHTML = hotDogs*4
-    totalEl.innerHTML = beers*3 + hotDogs*4
+    beerSubtotalEl.innerHTML = beers * 3
+    hotdogSubtotalEl.innerHTML = hotDogs * 4
+    totalEl.innerHTML = beers * 3 + hotDogs * 4
 
 }
